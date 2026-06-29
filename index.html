@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed & Bassant | Wedding Invitation</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+<div class="hearts">
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+    <span>❤</span>
+</div>
+
+<!-- Hero Section -->
+<header class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Mohamed <span>&</span> Bassant</h1>
+
+        <p class="subtitle">
+            Together with our families, we invite you to celebrate our wedding day.
+        </p>
+
+        <div class="details">
+            <p>📅 August 15, 2026</p>
+            <p>🕗 8:00 PM</p>
+
+            <a class="location-btn"
+               href="https://share.google/mlRtdwaLLjFZqoNiw"
+               target="_blank">
+                📍 View Venue Location
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- Guest Message -->
+<section class="message" data-aos="fade-up">
+    <h2>Dear Guests,</h2>
+
+    <p class="guest-message">
+        We're so excited to celebrate this special day with you.
+        After fate brought us together eight different times over more than ten years—while we were still complete strangers—it has brought us together once again, this time as bride and groom, and we couldn't be happier to celebrate the beginning of our forever with you. ❤️
+    </p>
+
+</section>
+
+<!-- Countdown -->
+<section class="countdown-section" data-aos="zoom-in">
+    <h2>Countdown to Our Big Day</h2>
+
+    <div class="countdown">
+
+        <div class="box">
+            <span id="days">0</span>
+            <p>Days</p>
+        </div>
+
+        <div class="box">
+            <span id="hours">0</span>
+            <p>Hours</p>
+        </div>
+
+        <div class="box">
+            <span id="minutes">0</span>
+            <p>Minutes</p>
+        </div>
+
+        <div class="box">
+            <span id="seconds">0</span>
+            <p>Seconds</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- RSVP -->
+<section class="rsvp" data-aos="fade-right">
+    <h2>RSVP</h2>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <textarea
+            name="message"
+            placeholder="Leave us a lovely message..."
+        ></textarea>
+
+        <div class="attendance">
+
+```
+<label class="attendance-card">
+    <input type="radio"
+           name="attendance"
+           value="Attending"
+           required>
+
+    <div class="card-content">
+        <span class="icon">💖</span>
+        <h3>I Will Attend</h3>
+        <p>I can't wait to celebrate with you.</p>
+    </div>
+</label>
+
+<label class="attendance-card">
+    <input type="radio"
+           name="attendance"
+           value="Not Attending">
+
+    <div class="card-content">
+        <span class="icon">🌷</span>
+        <h3>I Cannot Attend</h3>
+        <p>Sending all my love and best wishes.</p>
+    </div>
+</label>
+```
+
+</div>
+
+
+        <button type="submit">
+            Send RSVP
+        </button>
+
+    </form>
+
+</section>
+
+<!-- Upload Photos -->
+<section class="upload" data-aos="fade-left">
+    <h2>Share Your Memories 📸</h2>
+
+    <p>
+        After the wedding, we'd love to see your favorite moments and photos.
+    </p>
+
+    <a class="location-btn"
+       href="YOUR_GOOGLE_FORM_LINK"
+       target="_blank">
+        Upload Photos
+    </a>
+
+</section>
+
+<!-- FAQ -->
+<section class="faq" data-aos="fade-up">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-container">
+        <p>FAQ section coming soon...</p>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Made with ❤️ by Mohamed & Bassant</p>
+</footer>
+
+<script src="script.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true
+    });
+</script>
+</body>
+</html>

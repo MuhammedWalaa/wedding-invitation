@@ -1,0 +1,355 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#faf7f2;
+color:#333;
+line-height:1.8;
+overflow-x:hidden;
+}
+
+/* Floating Hearts */
+
+.hearts{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+z-index:1;
+}
+
+.hearts span{
+position:absolute;
+bottom:-50px;
+color:rgba(212,175,55,.7);
+text-shadow:0 0 15px rgba(212,175,55,.7);
+font-size:35px;
+animation:float 15s linear infinite;
+}
+
+.hearts span:nth-child(1){
+left:10%;
+animation-duration:12s;
+}
+
+.hearts span:nth-child(2){
+left:30%;
+animation-duration:18s;
+}
+
+.hearts span:nth-child(3){
+left:50%;
+animation-duration:15s;
+}
+
+.hearts span:nth-child(4){
+left:70%;
+animation-duration:20s;
+}
+
+.hearts span:nth-child(5){
+left:90%;
+animation-duration:13s;
+}
+
+@keyframes float{
+from{
+transform:translateY(0) rotate(0deg);
+opacity:0;
+}
+
+
+10%{
+    opacity:1;
+}
+
+to{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+}
+
+
+}
+
+/* Hero */
+
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.45);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+color:white;
+max-width:800px;
+padding:20px;
+animation:fadeIn 2s ease;
+}
+
+.hero h1{
+font-size:4.5rem;
+font-weight:700;
+}
+
+.hero span{
+color:#d4af37;
+}
+
+.subtitle{
+margin:20px 0;
+font-size:1.3rem;
+}
+
+.details p{
+margin:10px 0;
+}
+
+@keyframes fadeIn{
+
+
+from{
+    opacity:0;
+    transform:translateY(50px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+}
+
+/* General */
+
+section{
+padding:80px 20px;
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+h2{
+font-size:2.4rem;
+color:#d4af37;
+margin-bottom:30px;
+}
+
+.guest-message{
+max-width:850px;
+margin:0 auto;
+font-size:1.2rem;
+line-height:2;
+}
+
+/* Buttons */
+
+.location-btn,
+button{
+display:inline-block;
+margin-top:20px;
+padding:15px 35px;
+background:#d4af37;
+color:white;
+text-decoration:none;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:all .3s ease;
+}
+
+.location-btn:hover,
+button:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:0 10px 25px rgba(212,175,55,.4);
+}
+
+/* Countdown */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.box{
+background:white;
+width:150px;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+transition:all .3s ease;
+}
+
+.box:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+.box span{
+display:block;
+font-size:3rem;
+font-weight:700;
+color:#d4af37;
+}
+
+/* Form */
+
+.rsvp form{
+max-width:700px;
+margin:auto;
+}
+
+input,
+textarea{
+width:100%;
+padding:16px;
+margin:12px 0;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:1rem;
+}
+
+textarea{
+min-height:150px;
+resize:none;
+}
+
+/* Attendance Cards */
+
+.attendance{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin:35px 0;
+}
+
+.attendance-card{
+position:relative;
+cursor:pointer;
+}
+
+.attendance-card input{
+display:none;
+}
+
+.card-content{
+width:260px;
+padding:30px 25px;
+background:white;
+border:2px solid #eee;
+border-radius:25px;
+text-align:center;
+transition:all .35s ease;
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.card-content:hover{
+transform:translateY(-8px);
+}
+
+.icon{
+font-size:2.5rem;
+display:block;
+margin-bottom:15px;
+}
+
+.card-content h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.card-content p{
+color:#777;
+font-size:.95rem;
+}
+
+.attendance-card input:checked + .card-content{
+border-color:#d4af37;
+background:linear-gradient(135deg,#fffaf0,#fff);
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(212,175,55,.25);
+}
+
+.attendance-card input:checked + .card-content::after{
+content:"✓";
+position:absolute;
+top:15px;
+right:15px;
+width:30px;
+height:30px;
+border-radius:50%;
+background:#d4af37;
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+/* FAQ */
+
+.faq-container{
+max-width:700px;
+margin:auto;
+}
+
+/* Footer */
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:30px;
+position:relative;
+z-index:2;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+
+.hero h1{
+    font-size:3rem;
+}
+
+.box{
+    width:120px;
+}
+
+.guest-message{
+    font-size:1.05rem;
+}
+
+.card-content{
+    width:100%;
+    max-width:320px;
+}
+
+
+}
